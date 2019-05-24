@@ -9,5 +9,6 @@ public class Test {
     public static void main(String[] args) {
         Calendar calendar = new GregorianCalendar();
         Date date = calendar.getTime();
+        System.out.println(date.toString());
     }
 }
