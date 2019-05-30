@@ -8,7 +8,12 @@ public class StudentList {
     private int p = 0;
 
     public void add(Student s) {
-        list[p++] = s;
+        //предусмотреть выходха переделы списка
+        if (p >= list.length) {
+            //написать алгоритм. Я уже хочу спать и делать этого сегодня не буду.
+        }else {
+            list[p++] = s;
+        }
     }
 
     public Student get(int n) {
