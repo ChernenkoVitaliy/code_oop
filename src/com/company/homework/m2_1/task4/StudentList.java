@@ -10,7 +10,10 @@ public class StudentList {
     public void add(Student s) {
         //предусмотреть выходха переделы списка
         if (p >= list.length) {
-            //написать алгоритм. Я уже хочу спать и делать этого сегодня не буду.
+            Student[] swap = list.clone();
+            list = new Student[list.length + 100];
+            System.arraycopy(swap, 0, list, 0, swap.length);
+            list[p++] = s;
         }else {
             list[p++] = s;
         }
