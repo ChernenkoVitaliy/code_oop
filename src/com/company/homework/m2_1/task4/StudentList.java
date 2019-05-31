@@ -58,7 +58,7 @@ public class StudentList {
     //удаление студента из списка
     public boolean del(int index) {
         //индекс дожен быть больше 0
-        if (index <= p) {
+        if (index <= p && index >= 0) {
             //создаем временный массив(копия оригинала)
             Student[] temp = list.clone();
             //если индекс равен нулю копируем с первой ячейки массива и доканца
