@@ -3,8 +3,8 @@ package com.company.homework.m2_2.task1;
 public class IPhone extends Phone {
     protected String imei;
 
-    public IPhone() {
-        System.out.println("IPhone constructor");
+    public IPhone(int number, NumbersList numbersList) {
+        super(number, numbersList);
 
         touch = true;
         hasWiFi = true;
@@ -13,9 +13,9 @@ public class IPhone extends Phone {
 
 
     @Override
-    final public void call(String number) {
-        super.call(number);
+    final public void call(int number) {
         System.out.println("IPhone class is calling " + number);
+        super.call(number);
     }
 
     @Override

@@ -2,8 +2,8 @@ package com.company.homework.m2_2.task1;
 
 public class IPhone5 extends IPhone {
 
-    public IPhone5() {
-        System.out.println("IPhone5 constructor");
+    public IPhone5(int number, NumbersList numbersList) {
+        super(number, numbersList);
 
         screenSize = 4;
         imei = "1111111111111";

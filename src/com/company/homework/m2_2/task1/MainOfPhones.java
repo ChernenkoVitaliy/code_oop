@@ -2,48 +2,44 @@ package com.company.homework.m2_2.task1;
 
 /*1. Написать класс наследник SamsungS4 с диагональю экрана 5 дюймов, поддержкой Wifi и методом отправки SMS, который
 *    будет дописывать к сообщению слово "Hello"(+)
-* 2. Модифицировать класс Phone так, чтобы он считал количество звонков и сообщений отдельно для каждого объекта(+)*/
+* 2. Модифицировать класс Phone так, чтобы он считал количество звонков и сообщений отдельно для каждого объекта(+)
+* 3. Написать код для связи телефонов между собой. У каждого телефона будет свой номер. При вызове call(x) телефон должен
+*    найти собеседника по номеру X из всех доступных в данный момент телефонов (из всех созданных объектов типа Phone) и
+*    вызвать его метод answer().*/
 
 public class MainOfPhones {
     public static void main(String[] args) {
-        //Phone phone = new Phone(); ошибка т.к. класс абстрактный
+        //создаем лист где будут регистрироватся активные номера
+        final NumbersList list = new NumbersList();
 
-        Nokia3310 nokia3310 = new Nokia3310();
-        System.out.println("Nolia3310 screen size: " + nokia3310.getScreenSize());
-        nokia3310.call("123-45-67");
-        nokia3310.sendSMS("567-89-10", "text message");
-        System.out.println("--------------------------------------------");
-
-
-        IPhone iPhone = new IPhone();
-        System.out.println("IPhone screen size: " + iPhone.getScreenSize());
-        iPhone.call("133-45-67");
-        iPhone.sendSMS("133-45-67", "texm message");
-        System.out.println("---------------------------------------------");
+        //создаем несколько телефонов с номерами
+        Nokia3310 nokia3310 = new Nokia3310( 1234, list);
+        IPhone iPhone = new IPhone( 12345, list);
+        IPhone5 iPhone5 = new IPhone5(4321, list);
+        SamsungS4 samsungS4 = new SamsungS4(54321, list);
 
 
-        IPhone5 iPhone5 = new IPhone5();
-        System.out.println("IPhone5 screen size: " + iPhone5.getScreenSize());
-        iPhone5.call("123-45-67");
-        iPhone5.sendSMS("123-45-67", "text message");
+
+        //звоним. Если номер зарегестрирован вызываем метод answer()
+        nokia3310.call(12345);
+        System.out.println();
+        iPhone5.call(54321);
+        System.out.println();
+        iPhone.call(8554464);
 
 
-        System.out.println("----------------------------------------------");
-        SamsungS4 samsungS4 = new SamsungS4();
-        System.out.println("SamsungS4 screen size: " + samsungS4.getScreenSize());
-        samsungS4.call("123-456-77");
-        samsungS4.sendSMS("123-45-67", "text message");
+
 
         //звоним и отправляем смс для тестирования счетчиков
         for (int i = 0; i < 50; i++) {
             if (i < 5) {
-                nokia3310.call("1111");
+                nokia3310.call(1111);
                 nokia3310.sendSMS("1111", "blah blah");
             }else if (i > 5 && i < 15) {
-                iPhone5.call("22222");
+                iPhone5.call(22222);
                 iPhone5.sendSMS("2222", "bjksdfk");
             }else if (i > 15 && i < 50) {
-                samsungS4.call("33333");
+                samsungS4.call(33333);
                 samsungS4.sendSMS("3333", "fkjdshfkjdsk");
             }
         }
