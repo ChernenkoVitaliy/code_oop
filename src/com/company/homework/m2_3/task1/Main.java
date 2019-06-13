@@ -1,7 +1,7 @@
 package com.company.homework.m2_3.task1;
 
 /*Написать метод разбора списка параметров в формате URL:
-* param1=value&param2=value2&param3=value3. В случае ошибки в формате брасать исключение.*/
+* param1=value&param2=value2&param3=value3. В случае ошибки в формате брасать исключение.(+)*/
 
 import java.util.Arrays;
 
