@@ -17,5 +17,15 @@ public class Main {
 
         Car car = new BMW();
         System.out.println("Car weight: " + car.getWeirht());
+
+
+        Colored c = (Colored) car;
+        System.out.println("Car color: " + car.getColor());
+
+
+        Hamburger h = new Hamburger();
+        c = (Colored) h;
+        System.out.println("Hamburger color: " + c.getColor());
+
     }
 }
