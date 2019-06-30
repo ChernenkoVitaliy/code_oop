@@ -24,7 +24,7 @@ public class Main {
 
 
         Hamburger h = new Hamburger();
-        c = (Colored) h;
+        c = (Colored) h;// !!!!ClassCastException
         System.out.println("Hamburger color: " + c.getColor());
 
     }
