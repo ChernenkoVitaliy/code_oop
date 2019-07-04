@@ -1,6 +1,6 @@
 package com.company.homework.m2_3.task9;
 
-/*Добавить в проэкт "монитор" функцию мониторинга более одного файла*/
+/*Добавить в проэкт "монитор" функцию мониторинга более одного файла(+)*/
 
 public class Main {
     public static void main(String[] args) {
