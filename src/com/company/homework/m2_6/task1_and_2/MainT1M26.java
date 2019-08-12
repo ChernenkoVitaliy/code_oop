@@ -1,6 +1,7 @@
-package com.company.homework.m2_6.task1;
+package com.company.homework.m2_6.task1_and_2;
 
-/*Написать класс "человек". Рефлизовать его методы clone, equals, hashCode, toString.*/
+/*1. Написать класс "человек". Рефлизовать его методы clone, equals, hashCode, toString.
+* 2. Реализовать возможность сериализации для класса "человек"*/
 
 import java.util.Date;
 

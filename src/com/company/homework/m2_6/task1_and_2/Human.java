@@ -1,9 +1,11 @@
-package com.company.homework.m2_6.task1;
+package com.company.homework.m2_6.task1_and_2;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
-public class Human implements Cloneable{
+public class Human implements Cloneable, Serializable {
+    private static final long serialVersionUID = 8216545686369813896L;
     private String name;
     private String surname;
     private Date birth;
