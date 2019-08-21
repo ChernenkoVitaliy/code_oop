@@ -32,6 +32,7 @@ public class TaskMeneger {
     }
 
     public void stop() {
+        System.out.println("Done");
         thread.interrupt();
     }
 

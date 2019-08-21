@@ -10,9 +10,6 @@ public class MainOfTaskManager {
 
         m.start();
 
-        Thread.sleep(15000);
-
-        m.stop();
-
+        Runtime.getRuntime().addShutdownHook(new MyStop(m));
     }
 }
